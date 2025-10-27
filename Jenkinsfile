@@ -13,7 +13,8 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 echo "Building Docker Image..."
-                sh 'docker build -t nodejs-app .'
+                sh "docker build -t nodejs-app:${BUILD_NUMBER} ."
+
             }
         }
 
